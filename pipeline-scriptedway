@@ -2,7 +2,7 @@ node{
 
  try{
  
-   // sendSlackNotifications('STARTED')
+     slackNotifications('STARTED')
     
     echo "the job name is: ${env.JOB_NAME}"
     echo "the node name is: ${env.NODE_NAME}"
@@ -42,7 +42,7 @@ node{
   } 
   finally {
     // Success or failure, always send notifications
-    sendSlackNotifications(currentBuild.result)
+    sendslackNotifications(currentBuild.result)
   }
 } // node closing
 
@@ -71,6 +71,6 @@ def slackNotifications(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  slackSend (color: colorCode, message: summary)
+  slackSend (color: colorCode, message: summary, channel: #ssssss )
 }
 
