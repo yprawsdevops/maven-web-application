@@ -34,15 +34,17 @@ node{
      }  
     }
     
-    } catch (e) {
+    } // try closing
+    catch (e) {
     // If there was an exception thrown, the build failed
     currentBuild.result = "FAILED"
     throw e
-  } finally {
+  } 
+  finally {
     // Success or failure, always send notifications
     sendSlackNotifications(currentBuild.result)
   }
-}
+} // node closing
 
 def slackNotifications(String buildStatus = 'STARTED') {
   // build status of null means successful
@@ -58,10 +60,12 @@ def slackNotifications(String buildStatus = 'STARTED') {
   if (buildStatus == 'STARTED') {
     color = 'ORANGE'
     colorCode = '#FFA500'
-  } else if (buildStatus == 'SUCCESS') {
+  } 
+  else if (buildStatus == 'SUCCESS') {
     color = 'GREEN'
     colorCode = '#00FF00'
-  } else {
+  } 
+  else {
     color = 'RED'
     colorCode = '#FF0000'
   }
