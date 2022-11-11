@@ -42,7 +42,7 @@ node{
   } 
   finally {
     // Success or failure, always send notifications
-    sendslackNotifications(currentBuild.result)
+       slackNotifications(currentBuild.result)
   }
 } // node closing
 
