@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://15.206.82.1:6302/</sonar.host.url>
+		<sonar.host.url>http://172.31.46.65:6302/</sonar.host.url>
                 <sonar.login>squ_16715be444eb4bbfe513c22ae464eb084d217605</sonar.login>
 		
              
@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>srinu Releases Nexus Repository</name>
-	      <url>http://13.235.19.133:6302/srinu/repository/Srinu-release/</url>
+	      <url>http://172.31.43.93:6302/srinu/repository/Srinu-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>srinu Snapshot Nexus Repository </name>
-	      <url>http://13.235.19.133:6302/srinu/repository/Srinu-snashot/</url>
+	      <url>http://172.31.43.93:6302/srinu/repository/Srinu-snashot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
